@@ -19,7 +19,9 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <f:form action="" method="post" modelAttribute="category">
+            <f:form action="/category/update" method="post" modelAttribute="category">
+
+                <f:input path="id" type="hidden" />
 
                 <div class="mb-1">
                     <label class="col-form-label d-flex justify-content-start">
@@ -28,6 +30,7 @@
                     </label>
 
                     <f:input class="form-control" path="name" placeholder="Please enter name"/>
+                    <p class="text-danger"> ${nameErr}</p>
                 </div>
 
                 <div class="mb-1">

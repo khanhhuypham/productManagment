@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @Controller
 @RequestMapping("/category")
@@ -32,7 +34,19 @@ public class CategoryController {
 
     @PostMapping("/add")
     public String create(@ModelAttribute Category category, Model model){
+        if (category.getName().isEmpty()){
+            model.addAttribute("nameErr","category name is empty");
+            return "/category/add";
 
+        }else {
+            List<Category> categoryList = categoryService.findAll();
+            for (Category cate : categoryList) {
+                if (category.getName().equals(cate.getName())){
+                    model.addAttribute("nameErr","category name is already exist");
+                    return "/category/update";
+                }
+            }
+        }
 
         if(categoryService.save(category)){
             return "redirect:/category";
@@ -48,7 +62,21 @@ public class CategoryController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Category category){
+    public String update(@ModelAttribute Category category,Model model){
+        List<Category> categoryList = categoryService.findAll();
+
+        if (category.getName().isEmpty()){
+            model.addAttribute("nameErr","category name is empty");
+            return "/category/update";
+
+        }else {
+            for (Category cate : categoryList) {
+                if (category.getName().equals(cate.getName())){
+                    model.addAttribute("nameErr","category name is already exist");
+                    return "/category/update";
+                }
+            }
+        }
         if(categoryService.update(category)){
             return "redirect:/category";
         }

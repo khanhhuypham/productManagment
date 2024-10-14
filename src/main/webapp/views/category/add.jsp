@@ -19,7 +19,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <f:form action="" method="post" modelAttribute="category">
+            <f:form action="/category/add" method="post" modelAttribute="category">
 
                 <div class="mb-1">
                     <label class="col-form-label d-flex justify-content-start">
@@ -28,6 +28,7 @@
                     </label>
 
                     <f:input class="form-control" path="name" placeholder="Please enter name"/>
+                    <p class="text-danger"> ${nameErr}</p>
                 </div>
 
                 <div class="mb-1">
@@ -38,7 +39,7 @@
                     <f:textarea class="form-control" path="description" rows="3"/>
                 </div>
 
-                
+
 
                 <div class="modal-footer">
                     <a href="/category" class="btn btn-secondary" data-bs-dismiss="modal">Trở lại</a>

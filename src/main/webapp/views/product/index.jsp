@@ -63,10 +63,10 @@
                         <thead>
                         <tr>
                             <th>STT</th>
+                            <th>Image</th>
                             <th>Name</th>
                             <th>Price</th>
                             <th>Category_id</th>
-                            <th>Image</th>
                             <th>status</th>
                             <th colspan="2">Action</th>
                         </tr>
@@ -75,10 +75,16 @@
                         <c:forEach items="${products}" var="product" varStatus="loop">
                             <tr>
                                 <td scope="row">${loop.index+1}</td>
+                                <td>
+                                    <img src="${product.image}"
+                                         alt="image"
+                                         width="50" height="50"
+                                    >
+                                </td>
                                 <td>${product.name}</td>
                                 <td>${product.price}</td>
                                 <td>${product.category.name}</td>
-                                <td>${product.image}</td>
+
                                 <td>${product.status == 1 ? "ACTIVE" : "DEACTIVE"}</td>
 
                                 <td>

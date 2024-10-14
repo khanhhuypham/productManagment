@@ -27,7 +27,7 @@
                     <a href="/category" class="sidebar-link">Category management</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="" class="sidebar-link">Product management</a>
+                    <a href="/" class="sidebar-link">Product management</a>
                 </li>
 
 
