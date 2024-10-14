@@ -27,7 +27,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <f:form action="/update" method="post" modelAttribute="product">
+            <f:form action="/update" method="post" modelAttribute="product"  enctype="multipart/form-data">
 
                 <f:input path="id" type="hidden" />
 
@@ -69,6 +69,11 @@
                 </div>
 
 
+                <div class="mb-1">
+                    <label >Product image </label><br>
+                    <input type="file" class="form-control" name="imgFile" />
+                </div>
+
 
                 <div class="mb-1">
                     <label >Status </label><br>
@@ -85,8 +90,10 @@
                         </label>
                     </div>
 
-
                 </div>
+
+
+
 
                 <div class="modal-footer">
                     <a href="" class="btn btn-secondary" >Trở lại</a>

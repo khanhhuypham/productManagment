@@ -29,7 +29,7 @@
         <div class="col-lg-6">
             <h1 class="text-danger"> ${err}</h1>
 
-            <f:form action="/add" method="post" modelAttribute="product">
+            <f:form action="/add" method="post" modelAttribute="product" enctype="multipart/form-data">
 
                 <div class="mb-1">
                     <label class="col-form-label d-flex justify-content-start">
@@ -48,16 +48,7 @@
                     <f:input type="number" class="form-control" path="price" placeholder="Please enter price"/>
                 </div>
 
-
-
-<%--                <div class="mb-1">--%>
-<%--                    <label class="col-form-label d-flex justify-content-start">--%>
-<%--                        <span>Salary</span>--%>
-<%--                        <span class="text-alert">(*)</span>--%>
-<%--                    </label>--%>
-
-<%--                    <f:input type="number" class="form-control" path="salary" placeholder="Please enter salary"/>--%>
-<%--                </div>--%>
+                
 
                 <div class="mb-1">
 
@@ -75,6 +66,12 @@
                     </f:select>
 
                 </div>
+
+                <div class="mb-1">
+                    <label >Product image </label><br>
+                    <input type="file" class="form-control" name="imgFile" />
+                </div>
+
 
                 <div class="mb-1">
                     <label >Status </label><br>

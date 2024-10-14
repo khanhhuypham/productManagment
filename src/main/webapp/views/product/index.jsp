@@ -76,7 +76,7 @@
                             <tr>
                                 <td scope="row">${loop.index+1}</td>
                                 <td>
-                                    <img src="${product.image}"
+                                    <img src="/img/${product.image}"
                                          alt="image"
                                          width="50" height="50"
                                     >
