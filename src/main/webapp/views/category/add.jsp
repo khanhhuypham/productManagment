@@ -19,7 +19,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <f:form action="category/add" method="post" modelAttribute="category">
+            <f:form action="" method="post" modelAttribute="category">
 
                 <div class="mb-1">
                     <label class="col-form-label d-flex justify-content-start">
@@ -38,26 +38,7 @@
                     <f:textarea class="form-control" path="description" rows="3"/>
                 </div>
 
-
-<%--                <div class="mb-1">--%>
-<%--                    <label >Status </label><br>--%>
-
-<%--                    <div class="form-check form-check-inline">--%>
-<%--                        <label class="form-check-label">--%>
-<%--                            <f:radiobutton path="status" value="1"/> ACTIVE--%>
-<%--                        </label>--%>
-<%--                    </div>--%>
-
-<%--                    <div class="form-check form-check-inline">--%>
-<%--                        <label class="form-check-label">--%>
-<%--                            <f:radiobutton path="status" value="0" /> DEACTIVE--%>
-<%--                        </label>--%>
-<%--                    </div>--%>
-
-
-<%--                </div>--%>
-
-
+                
 
                 <div class="modal-footer">
                     <a href="/category" class="btn btn-secondary" data-bs-dismiss="modal">Trở lại</a>
