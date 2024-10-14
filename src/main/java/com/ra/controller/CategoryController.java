@@ -38,14 +38,6 @@ public class CategoryController {
             model.addAttribute("nameErr","category name is empty");
             return "/category/add";
 
-        }else {
-            List<Category> categoryList = categoryService.findAll();
-            for (Category cate : categoryList) {
-                if (category.getName().equals(cate.getName())){
-                    model.addAttribute("nameErr","category name is already exist");
-                    return "/category/update";
-                }
-            }
         }
 
         if(categoryService.save(category)){
@@ -69,14 +61,8 @@ public class CategoryController {
             model.addAttribute("nameErr","category name is empty");
             return "/category/update";
 
-        }else {
-            for (Category cate : categoryList) {
-                if (category.getName().equals(cate.getName())){
-                    model.addAttribute("nameErr","category name is already exist");
-                    return "/category/update";
-                }
-            }
         }
+
         if(categoryService.update(category)){
             return "redirect:/category";
         }

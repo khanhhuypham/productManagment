@@ -48,7 +48,7 @@
                     <f:input type="number" class="form-control" path="price" placeholder="Please enter price"/>
                 </div>
 
-                
+
 
                 <div class="mb-1">
 
